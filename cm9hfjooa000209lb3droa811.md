@@ -392,11 +392,8 @@ The built-in server **doesn’t have** important security features that a produc
 * **Load balancing** to distribute the work across multiple servers.
     
 * **Automatic recovery** if the server crashes.
-    
 
 This means if you use the built-in server for a real website, it could be **vulnerable to attacks**.
-
----
 
 ---
 
@@ -422,11 +419,11 @@ That’s where **WSGI** and **Gunicorn** come into play.
 
 ---
 
-### What is WSGI?
+### What is WSGI ?
 
 WSGI (pronounced *wiz-ghee*) stands for **Web Server Gateway Interface**. It’s not a tool or a software — it’s a **rulebook or standard** that explains **how web servers and Python apps should communicate**.
 
-#### Why WSGI?
+#### Why WSGI ?
 
 - Web servers like **Nginx** or **Apache** are great at handling internet traffic, but they **can’t run Python code directly**.
 - Flask apps are written in Python, so we need a **middleman** that can talk to both the web server and the Flask app.
@@ -446,7 +443,7 @@ In short:
 
 Gunicorn **sits between your app and the outside world**, receiving incoming requests and sending them to your Flask app using WSGI. Then it returns the response to the user.
 
-#### 🛠️ Why Use Gunicorn Instead of Just Flask?
+#### Why Use Gunicorn Instead of Just Flask?
 
 Flask’s built-in server (`app.run()`) is:
 - Not secure
@@ -503,7 +500,7 @@ Now open a browser and go to `http://127.0.0.1:8000` — you’ll see your app r
 
 ---
 
-### 🤎 How Gunicorn Works (Beginner Analogy)
+### 🤎 How Gunicorn Works
 
 Imagine your Flask app is a small kitchen in a restaurant. When customers come in, they place orders (HTTP requests). If only one person is cooking (Flask dev server), things get slow really fast.
 
@@ -565,7 +562,7 @@ Let’s compare the two to understand when and why to use Gunicorn:
 
 ---
 
-## 🟢 6. Full Request Flow: From Browser to Flask (Explained in Detail)
+## 🟢 6. Full Request Flow: From Browser to Flask 
 
 Let’s break down what *actually happens* when someone visits your Flask app in a browser. Even though it might look like magic when you see “Hello, Flask World!” on your screen — there’s a well-orchestrated process behind it.
 
@@ -668,8 +665,6 @@ Hello, Flask World!
 ```
 
 The browser renders this on the screen for the user to see.
-
-✅ And that’s the full round-trip of a single request!
 
 ---
 
