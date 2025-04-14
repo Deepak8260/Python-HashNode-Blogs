@@ -165,7 +165,7 @@ When you run `app.run()`, it does the following:
 4. Returns the response (like an HTML page or a message) back to the client.
     
 
-#### 🔄 Changing the Server’s Address and Port:
+#### Changing the Server’s Address and Port:
 
 By default, Flask listens on `127.0.0.1` (which is your local computer) and `port 5000`. But you can change the address or port if you want.
 
@@ -188,7 +188,7 @@ Flask's built-in server is **easy to use** and comes with some **great features*
 
 ---
 
-### 🔄 a. Auto Reload When Code Changes
+### a. Auto Reload When Code Changes
 
 One of the most convenient features of Flask’s built-in server is that it automatically reloads your app whenever you change your code. This means you don't need to stop and restart the server manually each time you make a change.
 
@@ -216,7 +216,7 @@ This automatic reloading helps you test changes in real-time without losing time
 
 ---
 
-### 🐞 b. Built-in Debugger (Helps You Find Bugs)
+### b. Built-in Debugger (Helps You Find Bugs)
 
 Flask’s built-in server also has a **debug mode** that helps you identify problems in your code.
 
@@ -279,7 +279,7 @@ This will run your app on `http://127.0.0.1:5000`, and you'll see **"Hello, Worl
 
 ---
 
-### 📁 d. Serving Static Files and Templates
+### d. Serving Static Files and Templates
 
 Flask’s built-in server can also serve **static files** like CSS, images, and JavaScript files, as well as **dynamic HTML pages** that you generate from **templates**.
 
@@ -365,7 +365,7 @@ Here’s why you should **avoid using it** for a live website:
 
 ---
 
-### 🧵 a. Single-threaded (Handles One Request at a Time)
+### a. Single-threaded (Handles One Request at a Time)
 
 The built-in server is **single-threaded**, which means it can only handle **one request at a time**. This works fine if only one person is using the app. But if multiple people visit your site, the server has to queue the requests. This can lead to slow response times or even crashes.
 
@@ -457,7 +457,7 @@ Gunicorn **is built for production**. It’s:
 
 ---
 
-### 🔧 Installing Gunicorn
+### Installing Gunicorn
 
 To install Gunicorn, simply use pip:
 
@@ -469,7 +469,7 @@ This will add a command-line tool called `gunicorn` to your system.
 
 ---
 
-### 📁 Running a Flask App with Gunicorn
+### Running a Flask App with Gunicorn
 
 Let’s say you have a simple Flask app inside a file called `hello.py`:
 
@@ -500,7 +500,7 @@ Now open a browser and go to `http://127.0.0.1:8000` — you’ll see your app r
 
 ---
 
-### 🤎 How Gunicorn Works
+### How Gunicorn Works
 
 Imagine your Flask app is a small kitchen in a restaurant. When customers come in, they place orders (HTTP requests). If only one person is cooking (Flask dev server), things get slow really fast.
 
@@ -532,7 +532,7 @@ Here are some useful options you might see or want to use:
 
 ---
 
-### 🔄 Flask Dev Server vs Gunicorn
+### Flask Dev Server vs Gunicorn
 
 Let’s compare the two to understand when and why to use Gunicorn:
 
@@ -550,7 +550,7 @@ Let’s compare the two to understand when and why to use Gunicorn:
 
 ---
 
-### 📦 Summary
+### Summary
 
 - **WSGI** is a **standard** that connects your Python app (like Flask) to a web server.
 - **Gunicorn** is a **WSGI server** that serves your Flask app in production.
@@ -568,13 +568,13 @@ Let’s break down what *actually happens* when someone visits your Flask app in
 
 ---
 
-### ✈️ Step-by-Step Journey of a Request
+### Step-by-Step Journey of a Request
 
 Let’s say your Flask app is running with Gunicorn on `127.0.0.1:8000`.
 
 ---
 
-### 🧭 a. Browser Sends a Request
+### a. Browser Sends a Request
 
 When you type `http://127.0.0.1:8000` into your browser and hit enter:
 
